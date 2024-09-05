@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/pranitha610/terraformpranu/tree/main/day3'
+                git branch: 'main', url: 'https://github.com/pranitha610/jenkins/blob/main'
             }
         }
         stage('init') {
