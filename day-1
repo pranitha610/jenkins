@@ -1,15 +1,32 @@
+
 pipeline {
     agent any
 
     stages {
-        stage('clone') {
+        stage('clone'){
             steps {
-                git branch: 'main', url: 'https://github.com/pranitha610/jenkins/blob/main'
+            git branch: 'main', url:' https://github.com/pranitha610/terraformpranu.git'
             }
         }
-        stage('init') {
+        stage('init'){
             steps {
-                sh 'terraform init'
+                dir('day3'){
+            sh "terraform init"
+                }
+            }
+        }
+         stage('plan'){
+            steps {
+                dir('day3'){
+            sh "terraform plan"
+                }
+            }
+        }
+        stage('plan'){
+            steps {
+                dir('day3'){
+            sh " terraform destroy -auto-approve"
+             }
             }
         }
     }
