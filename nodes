@@ -1,0 +1,6 @@
+ if we want to create a node we need to create the 2ec2 insctance 1 for master and 1 for slave give [ security group as tcp port as 5000/8080 ] 
+   * for creating master ec2 connect to jenkins
+   * create a node in jenkins copy the commands of the nodes and run in the slave then we can make the node as online 
+   * make sure you install java in the both the server.{jenkins --- manage jenkins ------security------in fixed give port as [5000/8080]}
+   node
+   
