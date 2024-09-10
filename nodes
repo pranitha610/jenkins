@@ -3,4 +3,15 @@
    * create a node in jenkins copy the commands of the nodes and run in the slave then we can make the node as online 
    * make sure you install java in the both the server.{jenkins --- manage jenkins ------security------in fixed give port as [5000/8080]}
    node
+
+pipeline {
+    agent {
+      label 'file' #give label name as same as node
+            }
+    stages {
+        stage('hello'){
+            steps {
+             echo "hello world"
+            }
+        }
    
